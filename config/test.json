@@ -1,0 +1,6 @@
+{
+    "database": {
+        "url": "mongodb://localhost:27017/easymart_test"
+    },
+    "JWT_SECRET": "test_secret_key"
+}
