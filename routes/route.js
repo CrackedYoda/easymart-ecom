@@ -5,6 +5,7 @@ import products from "./products.js";
 import orders from "./orders.js";
 import user from "./user.js";
 import cart from "./cart.js";
+import admin from "./admin.js";
 
 const router = Router(); //initializing express.Router()
 
@@ -16,5 +17,6 @@ router.use('/api/products',products)
 router.use('/api/orders', orders)
 router.use('/api/user',user)
 router.use('/api/cart', cart)
+router.use('/api/admin', admin)
 
 export default router;

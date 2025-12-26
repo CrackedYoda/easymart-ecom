@@ -1,5 +1,5 @@
 import mongoose from "mongoose";
-
+import bcrypt from "bcrypt";
 const userSchema = new mongoose.Schema({
   userName: {
     type: String,
@@ -8,14 +8,10 @@ const userSchema = new mongoose.Schema({
     maxLength: 50,
   },
   userEmail: {
-    unique: true,
-    type: String,
-    maxLength: 255,
+    required: true,
   },
   userPassword: {
-    type: String,
-    minLength: 4,
-    maxLength: 1024,
+    required: true,
   },
 
 
@@ -31,6 +27,22 @@ const userSchema = new mongoose.Schema({
   }
 });
 
+userSchema.pre('save', async function (next) {
+  try{
+if(!this.isModified('userPassword')){ return next();}
+  
+  const salt = await bcrypt.genSalt(12);
+  this.userPassword = await bcrypt.hash(this.userPassword, salt);
+  next();
+  } catch (error) {
+    next(error);
+  }
+});
+
+userSchema.methods.comparePassword = async function (candidatePassword) {
+  
+  return bcrypt.compare(candidatePassword, this.userPassword);
+};
 
 const User = mongoose.model("user", userSchema);
 

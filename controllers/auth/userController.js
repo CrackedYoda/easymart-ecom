@@ -28,16 +28,12 @@ export const addUser = async (req, res) => {
         .send("Phone number already associated with a customer");
     }
     // Hash password
-    const salt = await bcrypt.genSalt(12);
-    const hashedPassword = await bcrypt.hash(
-      req.validatedData.userPassword,
-      salt
-    );
+   
 
     const newUser = await User.create({
       userName: req.validatedData.userName,
       userEmail: req.validatedData.userEmail,
-      userPassword: hashedPassword,
+      userPassword: req.validatedData.userPassword,
       userPhone: req.validatedData.userPhone,
       role: req.validatedData.role || 'user',
     });
@@ -109,24 +105,24 @@ export const deleteUser = async (req, res) => {
 
 export const loginUser = async (req, res) => {
   try {
-    const user = await User.findOne({ userEmail: req.body.userEmail });
+    const user = await User.findOne({ userEmail: req.validatedData.userEmail });
 
     if (!user) {
-      return res.status(401).send("Invalid email or password");
+      return res.status(401).json({success: false, field: "userEmail", message: "Invalid email or password"});
     }
 
     // Compare passwords
-    const validPassword = await bcrypt.compare(
-      req.body.userPassword,
-      user.userPassword
+    const validPassword = await user.comparePassword(
+      req.validatedData.userPassword
     );
+    const rememberMe = req.validatedData.rememberMe;
 
     if (!validPassword) {
-      return res.status(401).send("Invalid email or password");
+      return res.status(401).json({success: false, field: "userPassword", message: "Invalid email or password"});
     }
     // Jwt sign and send token in cookie
     const token = jwt.sign({ id: user._id, role: user.role }, config.get("JWT_SECRET"), {
-      expiresIn: "1h",
+      expiresIn: rememberMe ? '7d' : '1h',
     });
     
     res.header('x-auth-token', token).send({ token });

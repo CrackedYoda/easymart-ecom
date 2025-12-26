@@ -29,6 +29,7 @@
     "mongoose": "^8.0.0",
     "morgan": "^1.10.1",
     "nodemon": "^3.0.1",
+    "react-hook-form": "^7.69.0",
     "supertest": "^7.1.4",
     "winston": "^3.19.0",
     "winston-mongodb": "^7.0.1"

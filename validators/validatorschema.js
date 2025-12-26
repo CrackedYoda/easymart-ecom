@@ -39,6 +39,16 @@ export const validateUser = (user) => {
   return userNameSchema.validate(user);
 };
 
+export const validateLogin = (user) => {
+  const loginSchema = Joi.object({
+    userEmail: Joi.string().email().required(),
+    userPassword: Joi.string().min(5).max(15).required(),
+    rememberMe: Joi.boolean().optional()
+  });
+
+  return loginSchema.validate(user);
+};
+
 export function validateCustomer(item) {
   const customerNameSchema = Joi.object({
     name: Joi.string().min(1).max(50).required(),

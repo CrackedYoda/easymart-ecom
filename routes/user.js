@@ -1,5 +1,5 @@
 import express from "express";
-import { validateUserMiddleware } from "../middleware/validationFactory.js";
+import { validateUserMiddleware, validateLoginMiddleware } from "../middleware/validationFactory.js";
 import userAuth from "../middleware/userAuth.js";
 import {
   addUser,
@@ -17,6 +17,6 @@ router.get("/", userAuth, getUsers);
 router.get("/:id", getUserById);
 router.put("/:id", validateUserMiddleware, updateUser);
 router.delete("/:id", deleteUser);
-router.post("/login", loginUser);
+router.post("/login", validateLoginMiddleware, loginUser);
 
 export default router;

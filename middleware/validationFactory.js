@@ -3,7 +3,8 @@ import {
   validateProduct,
   validateUser,
   validateCustomer,
-  validateCart
+  validateCart,
+  validateLogin
 } from '../validators/validatorschema.js';
 
 // Factory that returns middleware for a specific validator
@@ -29,3 +30,4 @@ export const validateProductMiddleware = validate(validateProduct);
 export const validateUserMiddleware = validate(validateUser);
 export const validateCustomerMiddleware = validate(validateCustomer);
 export const validateCartMiddleware = validate(validateCart);
+export const validateLoginMiddleware = validate(validateLogin);
