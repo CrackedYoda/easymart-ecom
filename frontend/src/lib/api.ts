@@ -2,9 +2,10 @@ import axios from 'axios';
 import Cookies from 'js-cookie';
 
 const api = axios.create({
-    baseURL: 'http://localhost:4000/api', // Adjust if backend port differs
+    baseURL: 'http://localhost:4000', // Adjust if backend port differs
     headers: {
         'Content-Type': 'application/json',
+        includeCredentials: true,
     },
 });
 
@@ -12,10 +13,8 @@ const api = axios.create({
 api.interceptors.request.use(
     (config) => {
         const token = Cookies.get('token'); // Assuming you store token as 'token'
-        if (token) {
-            config.headers['Authorization'] = `Bearer ${token}`;
-            // Also custom header if needed, but usually Bearer is enough. 
-            // Backend uses 'x-auth-token' or Bearer? need to check backend middleware.
+        if (token && config.headers) {
+            config.headers.Authorization = `Bearer ${token}`;
         }
         return config;
     },

@@ -1,36 +1,41 @@
 'use client';
 
 import { useState } from 'react';
-// import api from '@/lib/api';
+import { useForm } from 'react-hook-form';
+import api from '@/lib/api';
 import { useRouter } from 'next/navigation';
 import Link from 'next/link';
 import { FiAlertCircle } from 'react-icons/fi';
 
+type RegisterForm = {
+  userName: string;
+  userEmail: string;
+  userPhone: string;
+  userPassword: string;
+  role: 'user' | 'merchant';
+};
+
 export default function Register() {
   const router = useRouter();
-  const [formData, setFormData] = useState({ 
-    userName: '', 
-    userEmail: '', 
-    userPhone: '', 
-    userPassword: '' 
+  const {
+    register,
+    handleSubmit,
+    formState: { errors, isSubmitting },
+  } = useForm<RegisterForm>({
+    defaultValues: {
+      role: 'user',
+    },
   });
-  const [error, setError] = useState('');
-  const [loading, setLoading] = useState(false);
+  const [serverError, setServerError] = useState('');
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    setFormData({ ...formData, [e.target.name]: e.target.value });
-  };
-
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
-    setError('');
-    setLoading(true);
-    
-    setTimeout(() => {
-        console.log("Register Data:", formData);
-        router.push('/login?registered=true');
-        setLoading(false);
-    }, 1000);
+  const onSubmit = async (data: RegisterForm) => {
+    setServerError('');
+    try {
+      await api.post('/api/user', data);
+      router.push('/login');
+    } catch (error: any) {
+      setServerError(error.response?.data?.message || 'Registration failed. Please try again.');
+    }
   };
 
   return (
@@ -39,68 +44,93 @@ export default function Register() {
         <h1 className="text-3xl text-center mb-2 font-bold">Create Account</h1>
         <p className="text-center text-muted mb-6">Join EasyMart today</p>
         
-        {error && (
+        {serverError && (
             <div className="bg-destructive/20 text-destructive p-3 rounded mb-4 text-sm flex items-center gap-2">
-                <FiAlertCircle /> {error}
+                <FiAlertCircle /> {serverError}
             </div>
         )}
         
-        <form onSubmit={handleSubmit} className="flex flex-col gap-4">
+        <form onSubmit={handleSubmit(onSubmit)} className="flex flex-col gap-4">
           <div>
             <label className="block text-sm font-medium mb-1">Full Name</label>
             <input 
               type="text" 
-              name="userName" 
-              value={formData.userName} 
-              onChange={handleChange} 
-              required 
+              {...register('userName', { 
+                required: 'Full Name is required',
+                minLength: { value: 4, message: 'Name must be at least 4 characters' }
+              })}
               className="input"
               placeholder="John Doe"
             />
+            {errors.userName && <p className="text-red-500 text-xs mt-1">{errors.userName.message}</p>}
           </div>
 
           <div>
             <label className="block text-sm font-medium mb-1">Email</label>
             <input 
               type="email" 
-              name="userEmail" 
-              value={formData.userEmail} 
-              onChange={handleChange} 
-              required 
+              {...register('userEmail', { required: 'Email is required' })}
               className="input"
               placeholder="john@example.com"
             />
+            {errors.userEmail && <p className="text-red-500 text-xs mt-1">{errors.userEmail.message}</p>}
           </div>
 
           <div>
             <label className="block text-sm font-medium mb-1">Phone</label>
             <input 
               type="tel" 
-              name="userPhone" 
-              value={formData.userPhone} 
-              onChange={handleChange} 
-              required 
+              {...register('userPhone', { 
+                required: 'Phone is required',
+                minLength: { value: 11, message: 'Phone must be at least 11 digits' },
+                maxLength: { value: 20, message: 'Phone must be at most 20 digits' }
+              })}
               className="input"
               placeholder="+1234567890"
             />
+            {errors.userPhone && <p className="text-red-500 text-xs mt-1">{errors.userPhone.message}</p>}
           </div>
           
           <div>
             <label className="block text-sm font-medium mb-1">Password</label>
             <input 
               type="password" 
-              name="userPassword" 
-              value={formData.userPassword} 
-              onChange={handleChange} 
-              required 
+              {...register('userPassword', { 
+                required: 'Password is required',
+                minLength: { value: 6, message: 'Password must be at least 6 characters' }
+              })}
               className="input"
               placeholder="••••••••"
-              minLength={6}
             />
+            {errors.userPassword && <p className="text-red-500 text-xs mt-1">{errors.userPassword.message}</p>}
+          </div>
+
+          <div>
+            <label className="block text-sm font-medium mb-2">Account Type</label>
+            <div className="flex gap-6">
+              <label className="flex items-center gap-2 cursor-pointer">
+                <input
+                  type="radio"
+                  value="user"
+                  {...register('role')}
+                  className="w-4 h-4 accent-primary"
+                />
+                <span>User</span>
+              </label>
+              <label className="flex items-center gap-2 cursor-pointer">
+                <input
+                  type="radio"
+                  value="merchant"
+                  {...register('role')}
+                  className="w-4 h-4 accent-primary"
+                />
+                <span>Merchant</span>
+              </label>
+            </div>
           </div>
           
-          <button type="submit" className="btn btn-primary w-full mt-4" disabled={loading}>
-            {loading ? 'Creating Account...' : 'Sign Up (Demo)'}
+          <button type="submit" className="btn btn-primary w-full mt-4" disabled={isSubmitting}>
+            {isSubmitting ? 'Creating Account...' : 'Sign Up'}
           </button>
         </form>
         

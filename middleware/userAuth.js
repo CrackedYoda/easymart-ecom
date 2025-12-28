@@ -17,7 +17,7 @@ const userAuth = async (req, res, next) => {
     }
 
     try {
-        const decoded = jwt.verify(token, config.get("JWT_SECRET"));
+        const decoded = jwt.verify(token, config.get("ACCESS_SECRET"));
         
         // Fetch user to check suspension status
         const user = await User.findById(decoded.id);
