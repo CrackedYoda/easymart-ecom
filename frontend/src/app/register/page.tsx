@@ -31,7 +31,7 @@ export default function Register() {
   const onSubmit = async (data: RegisterForm) => {
     setServerError('');
     try {
-      await api.post('/api/user', data);
+      await api.post('/user', data);
       router.push('/login');
     } catch (error: any) {
       setServerError(error.response?.data?.message || 'Registration failed. Please try again.');

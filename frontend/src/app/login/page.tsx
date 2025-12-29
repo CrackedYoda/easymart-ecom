@@ -1,10 +1,11 @@
 'use client';
 
-import {useForm} from "react-hook-form";
+import {set, useForm} from "react-hook-form";
 import api from '@/lib/api';
-import Cookies from 'js-cookie';
+// import Cookies from 'js-cookie';
 import { useRouter } from 'next/navigation';
 import Link from 'next/link';
+import { setAccessToken } from '@/helpers/getaccesstoken';
 
 
 export default function Login() {
@@ -24,9 +25,9 @@ const{register, handleSubmit, setError, formState: {errors, isSubmitting}}= useF
 
     const onSubmit = async(data:loginForm) =>{
        try {
-        const res = await api.post('api/user/login', data);
+        const res = await api.post('/user/login', data);
         if (res.data.token) {
-          Cookies.set('token', res.data.token, { expires: data.rememberMe ? 7 : 1 });
+          setAccessToken(res.data.token);
         }
         router.push('/home');
 

@@ -1,11 +1,12 @@
+
 import express from 'express';
-import connectdb from './db/connectdb.js';
-import route from './routes/route.js';
+import connectdb from './Backend/db/connectdb.js';
+import route from './Backend/routes/route.js';
 import cookieParser from 'cookie-parser';
 import cors from 'cors';
 import helmet from 'helmet';
 import morgan from 'morgan';
-import logger from './startup/logging.js';
+import logger from './Backend/startup/logging.js';
 
 const app = express();
 const port = process.env.PORT || 4000;
@@ -14,7 +15,10 @@ const port = process.env.PORT || 4000;
 connectdb();
 
 // Middleware - MUST be before routes
-app.use(cors());
+app.use(cors({
+  origin: 'http://localhost:3000',
+  credentials: true
+}));
 app.use(helmet());
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));

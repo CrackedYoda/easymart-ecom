@@ -29,10 +29,10 @@ export function validateProduct(item) {
 
 export const validateUser = (user) => {
   const userNameSchema = Joi.object({
-    userName: Joi.string().min(5).max(10).required(),
+    userName: Joi.string().min(4).max(50).required(),
     userEmail: Joi.string().email().required(),
-    userPassword: Joi.string().min(5).max(15).required(),
-    userPhone: Joi.string().pattern(/^\d{10,15}$/).required(),
+    userPassword: Joi.string().min(6).max(255).required(),
+    userPhone: Joi.string().pattern(/^\d{10,20}$/).required(),
     role: Joi.string().valid('user', 'merchant', 'admin').optional()
   });
 
