@@ -4,6 +4,8 @@ import bcrypt from "bcrypt";
 import config from "config";
 import jwt from "jsonwebtoken";
 import { getDeviceInfo } from "../../helpers/getdevice.js";
+import { events } from "../../shared/events.js";
+import { eventEmitter } from "../../services/eventService.js";
 
 export const signUp = async (req, res) => {
   try {
@@ -165,7 +167,8 @@ export const login = async (req, res) => {
     });
 
     res.json({ accessToken });
-
+    eventEmitter(events.USER_LOGGED_IN, user)
+    
   } catch (error) {
     res.status(500).send(error.message);
   }

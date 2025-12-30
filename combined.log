@@ -958,3 +958,237 @@
 {"level":"info","message":"Morgan enabled...","timestamp":"2025-12-30T19:15:36.404Z"}
 {"level":"info","message":"App running on port 4000","timestamp":"2025-12-30T19:15:36.412Z"}
 {"level":"info","message":"Environment: development","timestamp":"2025-12-30T19:15:36.412Z"}
+{"level":"info","message":"Morgan enabled...","timestamp":"2025-12-30T19:22:51.837Z"}
+{"level":"info","message":"App running on port 4000","timestamp":"2025-12-30T19:22:51.844Z"}
+{"level":"info","message":"Environment: development","timestamp":"2025-12-30T19:22:51.845Z"}
+{"level":"info","message":"Morgan enabled...","timestamp":"2025-12-30T19:29:55.572Z"}
+{"level":"info","message":"App running on port 4000","timestamp":"2025-12-30T19:29:55.580Z"}
+{"level":"info","message":"Environment: development","timestamp":"2025-12-30T19:29:55.580Z"}
+{"level":"info","message":"Morgan enabled...","timestamp":"2025-12-30T19:39:27.836Z"}
+{"level":"info","message":"App running on port 4000","timestamp":"2025-12-30T19:39:27.842Z"}
+{"level":"info","message":"Environment: development","timestamp":"2025-12-30T19:39:27.843Z"}
+{"level":"info","message":"Morgan enabled...","timestamp":"2025-12-30T19:40:15.844Z"}
+{"level":"info","message":"App running on port 4000","timestamp":"2025-12-30T19:40:15.860Z"}
+{"level":"info","message":"Environment: development","timestamp":"2025-12-30T19:40:15.861Z"}
+{"level":"info","message":"Morgan enabled...","timestamp":"2025-12-30T19:40:20.333Z"}
+{"level":"info","message":"App running on port 4000","timestamp":"2025-12-30T19:40:20.340Z"}
+{"level":"info","message":"Environment: development","timestamp":"2025-12-30T19:40:20.341Z"}
+{"level":"info","message":"Morgan enabled...","timestamp":"2025-12-30T19:40:32.471Z"}
+{"level":"info","message":"App running on port 4000","timestamp":"2025-12-30T19:40:32.478Z"}
+{"level":"info","message":"Environment: development","timestamp":"2025-12-30T19:40:32.479Z"}
+{"level":"info","message":"Morgan enabled...","timestamp":"2025-12-30T19:40:35.409Z"}
+{"level":"info","message":"App running on port 4000","timestamp":"2025-12-30T19:40:35.421Z"}
+{"level":"info","message":"Environment: development","timestamp":"2025-12-30T19:40:35.422Z"}
+{"level":"info","message":"Morgan enabled...","timestamp":"2025-12-30T19:40:40.082Z"}
+{"level":"info","message":"App running on port 4000","timestamp":"2025-12-30T19:40:40.091Z"}
+{"level":"info","message":"Environment: development","timestamp":"2025-12-30T19:40:40.092Z"}
+{"level":"info","message":"Morgan enabled...","timestamp":"2025-12-30T19:40:44.576Z"}
+{"level":"info","message":"App running on port 4000","timestamp":"2025-12-30T19:40:44.585Z"}
+{"level":"info","message":"Environment: development","timestamp":"2025-12-30T19:40:44.585Z"}
+{"level":"info","message":"Morgan enabled...","timestamp":"2025-12-30T19:41:53.924Z"}
+{"level":"info","message":"App running on port 4000","timestamp":"2025-12-30T19:41:53.931Z"}
+{"level":"info","message":"Environment: development","timestamp":"2025-12-30T19:41:53.931Z"}
+{"level":"info","message":"Morgan enabled...","timestamp":"2025-12-30T19:42:09.611Z"}
+{"level":"info","message":"App running on port 4000","timestamp":"2025-12-30T19:42:09.618Z"}
+{"level":"info","message":"Environment: development","timestamp":"2025-12-30T19:42:09.618Z"}
+{"level":"info","message":"Morgan enabled...","timestamp":"2025-12-30T19:42:11.685Z"}
+{"level":"info","message":"App running on port 4000","timestamp":"2025-12-30T19:42:11.700Z"}
+{"level":"info","message":"Environment: development","timestamp":"2025-12-30T19:42:11.700Z"}
+{"level":"info","message":"Morgan enabled...","timestamp":"2025-12-30T19:42:13.579Z"}
+{"level":"info","message":"App running on port 4000","timestamp":"2025-12-30T19:42:13.587Z"}
+{"level":"info","message":"Environment: development","timestamp":"2025-12-30T19:42:13.588Z"}
+{"level":"info","message":"Morgan enabled...","timestamp":"2025-12-30T19:42:17.409Z"}
+{"level":"info","message":"App running on port 4000","timestamp":"2025-12-30T19:42:17.426Z"}
+{"level":"info","message":"Environment: development","timestamp":"2025-12-30T19:42:17.428Z"}
+{"level":"info","message":"Morgan enabled...","timestamp":"2025-12-30T19:42:22.302Z"}
+{"level":"info","message":"App running on port 4000","timestamp":"2025-12-30T19:42:22.327Z"}
+{"level":"info","message":"Environment: development","timestamp":"2025-12-30T19:42:22.333Z"}
+{"level":"info","message":"Morgan enabled...","timestamp":"2025-12-30T19:42:25.022Z"}
+{"level":"info","message":"App running on port 4000","timestamp":"2025-12-30T19:42:25.035Z"}
+{"level":"info","message":"Environment: development","timestamp":"2025-12-30T19:42:25.035Z"}
+{"level":"info","message":"Morgan enabled...","timestamp":"2025-12-30T19:42:26.634Z"}
+{"level":"info","message":"App running on port 4000","timestamp":"2025-12-30T19:42:26.643Z"}
+{"level":"info","message":"Environment: development","timestamp":"2025-12-30T19:42:26.644Z"}
+{"level":"info","message":"Morgan enabled...","timestamp":"2025-12-30T19:42:28.866Z"}
+{"level":"info","message":"App running on port 4000","timestamp":"2025-12-30T19:42:28.885Z"}
+{"level":"info","message":"Environment: development","timestamp":"2025-12-30T19:42:28.886Z"}
+{"level":"info","message":"Morgan enabled...","timestamp":"2025-12-30T19:42:30.979Z"}
+{"level":"info","message":"App running on port 4000","timestamp":"2025-12-30T19:42:30.988Z"}
+{"level":"info","message":"Environment: development","timestamp":"2025-12-30T19:42:30.989Z"}
+{"level":"info","message":"Morgan enabled...","timestamp":"2025-12-30T19:42:39.638Z"}
+{"level":"info","message":"App running on port 4000","timestamp":"2025-12-30T19:42:39.653Z"}
+{"level":"info","message":"Environment: development","timestamp":"2025-12-30T19:42:39.654Z"}
+{"level":"info","message":"Morgan enabled...","timestamp":"2025-12-30T19:42:51.863Z"}
+{"level":"info","message":"App running on port 4000","timestamp":"2025-12-30T19:42:51.883Z"}
+{"level":"info","message":"Environment: development","timestamp":"2025-12-30T19:42:51.884Z"}
+{"level":"info","message":"Morgan enabled...","timestamp":"2025-12-30T19:42:54.381Z"}
+{"level":"info","message":"App running on port 4000","timestamp":"2025-12-30T19:42:54.391Z"}
+{"level":"info","message":"Environment: development","timestamp":"2025-12-30T19:42:54.391Z"}
+{"level":"info","message":"Morgan enabled...","timestamp":"2025-12-30T19:43:03.266Z"}
+{"level":"info","message":"App running on port 4000","timestamp":"2025-12-30T19:43:03.275Z"}
+{"level":"info","message":"Environment: development","timestamp":"2025-12-30T19:43:03.275Z"}
+{"level":"info","message":"Morgan enabled...","timestamp":"2025-12-30T19:43:06.174Z"}
+{"level":"info","message":"App running on port 4000","timestamp":"2025-12-30T19:43:06.182Z"}
+{"level":"info","message":"Environment: development","timestamp":"2025-12-30T19:43:06.182Z"}
+{"level":"info","message":"Morgan enabled...","timestamp":"2025-12-30T19:43:13.760Z"}
+{"level":"info","message":"App running on port 4000","timestamp":"2025-12-30T19:43:13.770Z"}
+{"level":"info","message":"Environment: development","timestamp":"2025-12-30T19:43:13.771Z"}
+{"level":"info","message":"Morgan enabled...","timestamp":"2025-12-30T19:43:16.146Z"}
+{"level":"info","message":"App running on port 4000","timestamp":"2025-12-30T19:43:16.159Z"}
+{"level":"info","message":"Environment: development","timestamp":"2025-12-30T19:43:16.159Z"}
+{"level":"info","message":"Morgan enabled...","timestamp":"2025-12-30T19:43:20.404Z"}
+{"level":"info","message":"App running on port 4000","timestamp":"2025-12-30T19:43:20.415Z"}
+{"level":"info","message":"Environment: development","timestamp":"2025-12-30T19:43:20.415Z"}
+{"level":"info","message":"Morgan enabled...","timestamp":"2025-12-30T19:43:28.274Z"}
+{"level":"info","message":"App running on port 4000","timestamp":"2025-12-30T19:43:28.284Z"}
+{"level":"info","message":"Environment: development","timestamp":"2025-12-30T19:43:28.285Z"}
+{"level":"info","message":"Morgan enabled...","timestamp":"2025-12-30T19:43:59.686Z"}
+{"level":"info","message":"App running on port 4000","timestamp":"2025-12-30T19:43:59.702Z"}
+{"level":"info","message":"Environment: development","timestamp":"2025-12-30T19:43:59.706Z"}
+{"level":"info","message":"Morgan enabled...","timestamp":"2025-12-30T19:44:01.441Z"}
+{"level":"info","message":"App running on port 4000","timestamp":"2025-12-30T19:44:01.448Z"}
+{"level":"info","message":"Environment: development","timestamp":"2025-12-30T19:44:01.449Z"}
+{"level":"info","message":"Morgan enabled...","timestamp":"2025-12-30T19:44:03.869Z"}
+{"level":"info","message":"App running on port 4000","timestamp":"2025-12-30T19:44:03.879Z"}
+{"level":"info","message":"Environment: development","timestamp":"2025-12-30T19:44:03.879Z"}
+{"level":"info","message":"Morgan enabled...","timestamp":"2025-12-30T19:44:07.469Z"}
+{"level":"info","message":"App running on port 4000","timestamp":"2025-12-30T19:44:07.482Z"}
+{"level":"info","message":"Environment: development","timestamp":"2025-12-30T19:44:07.483Z"}
+{"level":"info","message":"Morgan enabled...","timestamp":"2025-12-30T19:44:20.454Z"}
+{"level":"info","message":"App running on port 4000","timestamp":"2025-12-30T19:44:20.484Z"}
+{"level":"info","message":"Environment: development","timestamp":"2025-12-30T19:44:20.486Z"}
+{"level":"info","message":"Morgan enabled...","timestamp":"2025-12-30T19:44:23.115Z"}
+{"level":"info","message":"App running on port 4000","timestamp":"2025-12-30T19:44:23.129Z"}
+{"level":"info","message":"Environment: development","timestamp":"2025-12-30T19:44:23.131Z"}
+{"level":"info","message":"Morgan enabled...","timestamp":"2025-12-30T19:44:25.682Z"}
+{"level":"info","message":"App running on port 4000","timestamp":"2025-12-30T19:44:25.701Z"}
+{"level":"info","message":"Environment: development","timestamp":"2025-12-30T19:44:25.702Z"}
+{"level":"info","message":"Morgan enabled...","timestamp":"2025-12-30T19:44:32.318Z"}
+{"level":"info","message":"App running on port 4000","timestamp":"2025-12-30T19:44:32.327Z"}
+{"level":"info","message":"Environment: development","timestamp":"2025-12-30T19:44:32.327Z"}
+{"level":"info","message":"Morgan enabled...","timestamp":"2025-12-30T19:44:37.284Z"}
+{"level":"info","message":"App running on port 4000","timestamp":"2025-12-30T19:44:37.302Z"}
+{"level":"info","message":"Environment: development","timestamp":"2025-12-30T19:44:37.303Z"}
+{"level":"info","message":"Morgan enabled...","timestamp":"2025-12-30T19:44:54.306Z"}
+{"level":"info","message":"App running on port 4000","timestamp":"2025-12-30T19:44:54.320Z"}
+{"level":"info","message":"Environment: development","timestamp":"2025-12-30T19:44:54.321Z"}
+{"level":"info","message":"Morgan enabled...","timestamp":"2025-12-30T19:44:56.176Z"}
+{"level":"info","message":"App running on port 4000","timestamp":"2025-12-30T19:44:56.190Z"}
+{"level":"info","message":"Environment: development","timestamp":"2025-12-30T19:44:56.191Z"}
+{"level":"info","message":"Morgan enabled...","timestamp":"2025-12-30T19:45:12.113Z"}
+{"level":"info","message":"App running on port 4000","timestamp":"2025-12-30T19:45:12.124Z"}
+{"level":"info","message":"Environment: development","timestamp":"2025-12-30T19:45:12.124Z"}
+{"level":"info","message":"Morgan enabled...","timestamp":"2025-12-30T19:45:24.229Z"}
+{"level":"info","message":"App running on port 4000","timestamp":"2025-12-30T19:45:24.236Z"}
+{"level":"info","message":"Environment: development","timestamp":"2025-12-30T19:45:24.236Z"}
+{"level":"info","message":"Morgan enabled...","timestamp":"2025-12-30T19:45:29.809Z"}
+{"level":"info","message":"App running on port 4000","timestamp":"2025-12-30T19:45:29.818Z"}
+{"level":"info","message":"Environment: development","timestamp":"2025-12-30T19:45:29.819Z"}
+{"level":"info","message":"Morgan enabled...","timestamp":"2025-12-30T19:46:31.209Z"}
+{"level":"info","message":"App running on port 4000","timestamp":"2025-12-30T19:46:31.228Z"}
+{"level":"info","message":"Environment: development","timestamp":"2025-12-30T19:46:31.229Z"}
+{"level":"info","message":"Morgan enabled...","timestamp":"2025-12-30T19:46:33.261Z"}
+{"level":"info","message":"App running on port 4000","timestamp":"2025-12-30T19:46:33.268Z"}
+{"level":"info","message":"Environment: development","timestamp":"2025-12-30T19:46:33.269Z"}
+{"level":"info","message":"Morgan enabled...","timestamp":"2025-12-30T19:46:39.704Z"}
+{"level":"info","message":"App running on port 4000","timestamp":"2025-12-30T19:46:39.712Z"}
+{"level":"info","message":"Environment: development","timestamp":"2025-12-30T19:46:39.713Z"}
+{"level":"info","message":"Morgan enabled...","timestamp":"2025-12-30T19:46:41.853Z"}
+{"level":"info","message":"App running on port 4000","timestamp":"2025-12-30T19:46:41.872Z"}
+{"level":"info","message":"Environment: development","timestamp":"2025-12-30T19:46:41.875Z"}
+{"level":"info","message":"Morgan enabled...","timestamp":"2025-12-30T19:46:43.729Z"}
+{"level":"info","message":"App running on port 4000","timestamp":"2025-12-30T19:46:43.738Z"}
+{"level":"info","message":"Environment: development","timestamp":"2025-12-30T19:46:43.739Z"}
+{"level":"info","message":"Morgan enabled...","timestamp":"2025-12-30T19:46:46.291Z"}
+{"level":"info","message":"App running on port 4000","timestamp":"2025-12-30T19:46:46.301Z"}
+{"level":"info","message":"Environment: development","timestamp":"2025-12-30T19:46:46.302Z"}
+{"level":"info","message":"Morgan enabled...","timestamp":"2025-12-30T19:46:53.972Z"}
+{"level":"info","message":"App running on port 4000","timestamp":"2025-12-30T19:46:53.981Z"}
+{"level":"info","message":"Environment: development","timestamp":"2025-12-30T19:46:53.982Z"}
+{"level":"info","message":"Morgan enabled...","timestamp":"2025-12-30T19:47:51.943Z"}
+{"level":"info","message":"App running on port 4000","timestamp":"2025-12-30T19:47:51.957Z"}
+{"level":"info","message":"Environment: development","timestamp":"2025-12-30T19:47:51.958Z"}
+{"level":"info","message":"Morgan enabled...","timestamp":"2025-12-30T19:47:59.795Z"}
+{"level":"info","message":"App running on port 4000","timestamp":"2025-12-30T19:47:59.803Z"}
+{"level":"info","message":"Environment: development","timestamp":"2025-12-30T19:47:59.804Z"}
+{"level":"info","message":"Morgan enabled...","timestamp":"2025-12-30T19:48:05.455Z"}
+{"level":"info","message":"App running on port 4000","timestamp":"2025-12-30T19:48:05.464Z"}
+{"level":"info","message":"Environment: development","timestamp":"2025-12-30T19:48:05.465Z"}
+{"level":"info","message":"Morgan enabled...","timestamp":"2025-12-30T19:48:07.614Z"}
+{"level":"info","message":"App running on port 4000","timestamp":"2025-12-30T19:48:07.638Z"}
+{"level":"info","message":"Environment: development","timestamp":"2025-12-30T19:48:07.640Z"}
+{"level":"info","message":"Morgan enabled...","timestamp":"2025-12-30T19:48:11.563Z"}
+{"level":"info","message":"App running on port 4000","timestamp":"2025-12-30T19:48:11.573Z"}
+{"level":"info","message":"Environment: development","timestamp":"2025-12-30T19:48:11.574Z"}
+{"level":"info","message":"Morgan enabled...","timestamp":"2025-12-30T19:48:14.916Z"}
+{"level":"info","message":"App running on port 4000","timestamp":"2025-12-30T19:48:14.925Z"}
+{"level":"info","message":"Environment: development","timestamp":"2025-12-30T19:48:14.926Z"}
+{"level":"info","message":"Morgan enabled...","timestamp":"2025-12-30T19:48:26.984Z"}
+{"level":"info","message":"App running on port 4000","timestamp":"2025-12-30T19:48:26.994Z"}
+{"level":"info","message":"Environment: development","timestamp":"2025-12-30T19:48:26.995Z"}
+{"level":"info","message":"Morgan enabled...","timestamp":"2025-12-30T19:48:29.734Z"}
+{"level":"info","message":"App running on port 4000","timestamp":"2025-12-30T19:48:29.744Z"}
+{"level":"info","message":"Environment: development","timestamp":"2025-12-30T19:48:29.745Z"}
+{"level":"info","message":"Morgan enabled...","timestamp":"2025-12-30T19:48:43.484Z"}
+{"level":"info","message":"App running on port 4000","timestamp":"2025-12-30T19:48:43.494Z"}
+{"level":"info","message":"Environment: development","timestamp":"2025-12-30T19:48:43.494Z"}
+{"level":"info","message":"Morgan enabled...","timestamp":"2025-12-30T19:48:46.792Z"}
+{"level":"info","message":"App running on port 4000","timestamp":"2025-12-30T19:48:46.799Z"}
+{"level":"info","message":"Environment: development","timestamp":"2025-12-30T19:48:46.800Z"}
+{"level":"info","message":"Morgan enabled...","timestamp":"2025-12-30T19:48:52.509Z"}
+{"level":"info","message":"App running on port 4000","timestamp":"2025-12-30T19:48:52.521Z"}
+{"level":"info","message":"Environment: development","timestamp":"2025-12-30T19:48:52.522Z"}
+{"level":"info","message":"Morgan enabled...","timestamp":"2025-12-30T19:48:57.224Z"}
+{"level":"info","message":"App running on port 4000","timestamp":"2025-12-30T19:48:57.235Z"}
+{"level":"info","message":"Environment: development","timestamp":"2025-12-30T19:48:57.236Z"}
+{"level":"info","message":"Morgan enabled...","timestamp":"2025-12-30T19:49:09.062Z"}
+{"level":"info","message":"App running on port 4000","timestamp":"2025-12-30T19:49:09.076Z"}
+{"level":"info","message":"Environment: development","timestamp":"2025-12-30T19:49:09.077Z"}
+{"level":"info","message":"Morgan enabled...","timestamp":"2025-12-30T19:49:11.084Z"}
+{"level":"info","message":"App running on port 4000","timestamp":"2025-12-30T19:49:11.094Z"}
+{"level":"info","message":"Environment: development","timestamp":"2025-12-30T19:49:11.095Z"}
+{"level":"info","message":"Morgan enabled...","timestamp":"2025-12-30T19:49:15.741Z"}
+{"level":"info","message":"App running on port 4000","timestamp":"2025-12-30T19:49:15.754Z"}
+{"level":"info","message":"Environment: development","timestamp":"2025-12-30T19:49:15.754Z"}
+{"level":"info","message":"Morgan enabled...","timestamp":"2025-12-30T19:49:24.837Z"}
+{"level":"info","message":"App running on port 4000","timestamp":"2025-12-30T19:49:24.860Z"}
+{"level":"info","message":"Environment: development","timestamp":"2025-12-30T19:49:24.865Z"}
+{"level":"info","message":"Morgan enabled...","timestamp":"2025-12-30T19:49:38.811Z"}
+{"level":"info","message":"App running on port 4000","timestamp":"2025-12-30T19:49:38.820Z"}
+{"level":"info","message":"Environment: development","timestamp":"2025-12-30T19:49:38.821Z"}
+{"level":"info","message":"Morgan enabled...","timestamp":"2025-12-30T19:49:59.513Z"}
+{"level":"info","message":"App running on port 4000","timestamp":"2025-12-30T19:49:59.524Z"}
+{"level":"info","message":"Environment: development","timestamp":"2025-12-30T19:49:59.524Z"}
+{"level":"info","message":"Morgan enabled...","timestamp":"2025-12-30T19:51:10.307Z"}
+{"level":"info","message":"App running on port 4000","timestamp":"2025-12-30T19:51:10.316Z"}
+{"level":"info","message":"Environment: development","timestamp":"2025-12-30T19:51:10.317Z"}
+{"level":"info","message":"Morgan enabled...","timestamp":"2025-12-30T19:51:13.276Z"}
+{"level":"info","message":"App running on port 4000","timestamp":"2025-12-30T19:51:13.293Z"}
+{"level":"info","message":"Environment: development","timestamp":"2025-12-30T19:51:13.297Z"}
+{"level":"info","message":"Morgan enabled...","timestamp":"2025-12-30T19:51:21.828Z"}
+{"level":"info","message":"App running on port 4000","timestamp":"2025-12-30T19:51:21.838Z"}
+{"level":"info","message":"Environment: development","timestamp":"2025-12-30T19:51:21.838Z"}
+{"level":"info","message":"Morgan enabled...","timestamp":"2025-12-30T19:52:16.120Z"}
+{"level":"info","message":"App running on port 4000","timestamp":"2025-12-30T19:52:16.133Z"}
+{"level":"info","message":"Environment: development","timestamp":"2025-12-30T19:52:16.134Z"}
+{"level":"info","message":"Morgan enabled...","timestamp":"2025-12-30T19:52:38.200Z"}
+{"level":"info","message":"App running on port 4000","timestamp":"2025-12-30T19:52:38.209Z"}
+{"level":"info","message":"Environment: development","timestamp":"2025-12-30T19:52:38.210Z"}
+{"level":"info","message":"Morgan enabled...","timestamp":"2025-12-30T19:53:11.017Z"}
+{"level":"info","message":"App running on port 4000","timestamp":"2025-12-30T19:53:11.048Z"}
+{"level":"info","message":"Environment: development","timestamp":"2025-12-30T19:53:11.055Z"}
+{"level":"info","message":"Morgan enabled...","timestamp":"2025-12-30T19:53:13.177Z"}
+{"level":"info","message":"App running on port 4000","timestamp":"2025-12-30T19:53:13.186Z"}
+{"level":"info","message":"Environment: development","timestamp":"2025-12-30T19:53:13.186Z"}
+{"level":"info","message":"Morgan enabled...","timestamp":"2025-12-30T19:53:17.393Z"}
+{"level":"info","message":"App running on port 4000","timestamp":"2025-12-30T19:53:17.408Z"}
+{"level":"info","message":"Environment: development","timestamp":"2025-12-30T19:53:17.409Z"}
+{"level":"info","message":"Morgan enabled...","timestamp":"2025-12-30T19:53:25.703Z"}
+{"level":"info","message":"App running on port 4000","timestamp":"2025-12-30T19:53:25.717Z"}
+{"level":"info","message":"Environment: development","timestamp":"2025-12-30T19:53:25.717Z"}
+{"level":"info","message":"Morgan enabled...","timestamp":"2025-12-30T19:53:28.076Z"}
+{"level":"info","message":"App running on port 4000","timestamp":"2025-12-30T19:53:28.088Z"}
+{"level":"info","message":"Environment: development","timestamp":"2025-12-30T19:53:28.088Z"}
+{"level":"info","message":"Morgan enabled...","timestamp":"2025-12-30T19:53:35.881Z"}
+{"level":"info","message":"App running on port 4000","timestamp":"2025-12-30T19:53:35.890Z"}
+{"level":"info","message":"Environment: development","timestamp":"2025-12-30T19:53:35.890Z"}

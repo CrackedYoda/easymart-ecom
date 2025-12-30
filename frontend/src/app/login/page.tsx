@@ -1,6 +1,6 @@
 'use client';
 
-import {set, useForm} from "react-hook-form";
+import {useForm} from "react-hook-form";
 import api from '@/lib/api';
 // import Cookies from 'js-cookie';
 import { useRouter } from 'next/navigation';
