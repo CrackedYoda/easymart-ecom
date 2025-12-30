@@ -1,6 +1,8 @@
 import express from "express";
 import { validateUserMiddleware, validateLoginMiddleware } from "../middleware/validationFactory.js";
 import userAuth from "../middleware/userAuth.js";
+import roleAuth from "../services/roleService.js";
+import { role } from "../shared/roles.js";
 import {
   signUp,
   getUsers,
@@ -18,7 +20,7 @@ router.post("/", validateUserMiddleware, signUp);
 router.get("/", userAuth, getUsers);
 router.get("/:id", getUserById);
 router.put("/:id", validateUserMiddleware, updateUserPassword);
-router.delete("/:id", deleteUser);
+router.delete("/:id", roleAuth(role.ADMIN), deleteUser);
 router.post("/login", validateLoginMiddleware, login);
 router.post("/refreshToken", refreshToken);
 router.post("/logout", logout);

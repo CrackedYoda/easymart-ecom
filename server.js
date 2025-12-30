@@ -7,7 +7,7 @@ import cors from 'cors';
 import helmet from 'helmet';
 import morgan from 'morgan';
 import logger from './Backend/startup/logging.js';
-
+import { rawVerify } from './Backend/middleware/rawbody.js';
 const app = express();
 const port = process.env.PORT || 4000;
 
@@ -20,9 +20,10 @@ app.use(cors({
   credentials: true
 }));
 app.use(helmet());
-app.use(express.json());
+app.use(express.json({verify: rawVerify}));
 app.use(express.urlencoded({ extended: true }));
 app.use(cookieParser());
+
 
 if (app.get('env') === 'development') {
   app.use(morgan('tiny'));

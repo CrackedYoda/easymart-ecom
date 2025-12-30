@@ -23,8 +23,8 @@ const userSchema = new mongoose.Schema({
   userPhone: { type: String, minLength: 11, maxLength: 20 },
   role: {
     type: String,
-    enum: ["user", "merchant", "admin"],
-    default: "user",
+    enum: ["USER", "MERCHANT", "ADMIN"],
+    default: "USER",
   },
   isSuspended: {
     type: Boolean,
