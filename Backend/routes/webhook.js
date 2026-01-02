@@ -4,7 +4,7 @@ import { events } from '../shared/events.js';
 
 const router = express.Router();
 
-router.post('/webhook', (req, res) => {
+router.post('/', (req, res) => {
    const receivedSignature = req.headers['x-webhook-signature'];
    const rawBody = req.rawBody;
    const timeStamp = req.headers['x-webhook-timestamp'];
@@ -19,7 +19,7 @@ const event = req.body.event;
 const user = req.body.data;
 switch(event){
     case events.USER_LOGGED_IN:
-        // Handle logic here
+        console.log(event)
         break;
    } 
    res.status(200).send({ received: true });

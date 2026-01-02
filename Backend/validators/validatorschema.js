@@ -33,7 +33,7 @@ export const validateUser = (user) => {
     userEmail: Joi.string().email().required(),
     userPassword: Joi.string().min(6).max(255).required(),
     userPhone: Joi.string().pattern(/^\d{10,20}$/).required(),
-    role: Joi.string().valid('user', 'merchant', 'admin').optional()
+    role: Joi.string().valid('USER', 'MERCHANT', 'ADMIN').optional()
   });
 
   return userNameSchema.validate(user);

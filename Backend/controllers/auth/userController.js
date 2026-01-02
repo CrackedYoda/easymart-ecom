@@ -7,6 +7,8 @@ import { getDeviceInfo } from "../../helpers/getdevice.js";
 import { events } from "../../shared/events.js";
 import { eventEmitter } from "../../services/eventService.js";
 import { getOrSetCachedData, deleteCachedData } from "../../helpers/cacheData.js";
+
+
 export const signUp = async (req, res) => {
   try {
     // Check if user already exists
@@ -46,7 +48,7 @@ export const signUp = async (req, res) => {
       userEmail: req.validatedData.userEmail,
       userPassword: req.validatedData.userPassword,
       userPhone: req.validatedData.userPhone,
-      role: req.validatedData.role || "user",
+      role: req.validatedData.role.toUpperCase() || "USER",
     });
 
     res.status(201).send(newUser);
