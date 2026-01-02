@@ -1,6 +1,6 @@
 import express from 'express';
 import { verifySignature, verifyTimeStamp } from '../services/eventService.js';
-import { events } from '../shared/events';
+import { events } from '../shared/events.js';
 
 const router = express.Router();
 

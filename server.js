@@ -8,6 +8,8 @@ import helmet from 'helmet';
 import morgan from 'morgan';
 import logger from './Backend/startup/logging.js';
 import { rawVerify } from './Backend/middleware/rawbody.js';
+import './Backend/startup/redisConnect.js';
+
 const app = express();
 const port = process.env.PORT || 4000;
 

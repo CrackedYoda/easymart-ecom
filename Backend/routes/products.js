@@ -1,7 +1,7 @@
 import { Router } from "express";
 import { addProduct, getProducts, getProductById, updateProduct, deleteProduct } from "../controllers/productController.js";
 import { validateProductMiddleware } from "../middleware/validationFactory.js";
-import userAuth from "../middleware/userAuth.js";
+import userAuth from "../services/roleService.js";
 import {role} from "../shared/roles.js";
 
 
@@ -12,6 +12,6 @@ router.post("/newproduct", userAuth(role.MERCHANT), validateProductMiddleware, a
 router.get("/", getProducts);
 router.get("/:id", getProductById);
 router.put("/:id", userAuth(role.MERCHANT), validateProductMiddleware, updateProduct);
-router.delete("/:id", userAuth(role.MERCHANT, role.ADMIN), deleteProduct);
+router.delete("/:id", userAuth(role.MERCHANT), deleteProduct);
 
 export default router;

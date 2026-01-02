@@ -1,7 +1,7 @@
 import express from "express";
 import { validateCustomerMiddleware } from "../middleware/validationFactory.js";
 import {getCustomers,addCustomer,changeCustomer,deleteCustomer} from "../controllers/customerController.js";
-import userAuth from "../middleware/userAuth.js";
+import userAuth from "../services/roleService.js";
 import { role } from "../shared/roles.js";
 
 const router = express.Router();

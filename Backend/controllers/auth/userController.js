@@ -6,7 +6,7 @@ import jwt from "jsonwebtoken";
 import { getDeviceInfo } from "../../helpers/getdevice.js";
 import { events } from "../../shared/events.js";
 import { eventEmitter } from "../../services/eventService.js";
-
+import { getOrSetCachedData, deleteCachedData } from "../../helpers/cacheData.js";
 export const signUp = async (req, res) => {
   try {
     // Check if user already exists
@@ -57,7 +57,10 @@ export const signUp = async (req, res) => {
 
 export const getUsers = async (req, res) => {
   try {
-    const users = await User.findById(req.user.id).select("-userPassword");
+    const users = await getOrSetCachedData("users", User.find().select("-userPassword"), 20);
+    if (!users) {
+      return res.status(404).send("Users not found");
+    }
     res.send(users);
   } catch (error) {
     res.status(500).send(error.message);
@@ -66,17 +69,15 @@ export const getUsers = async (req, res) => {
 
 export const getUserById = async (req, res) => {
   try {
-    const user = await User.findById(req.params.id).select("-userPassword");
-
-    if (!user) {
+    const users = await getOrSetCachedData(`user:${req.user.id}`, User.findById(req.user.id).select("-userPassword"), 20);
+    if (!users) {
       return res.status(404).send("User not found");
     }
-
-    res.send(user);
+    res.status(200).send(users);
   } catch (error) {
     res.status(500).send(error.message);
   }
-};
+}
 
 export const updateUserPassword = async (req, res) => {
   try {
@@ -84,7 +85,7 @@ export const updateUserPassword = async (req, res) => {
     if (!currentUser) {
       return res.status(404).send("User not found");
     }
-    const newPassword = await req.validatedData.userPassword;
+    const newPassword = req.validatedData.userPassword;
     const salt = await bcrypt.genSalt(12);
     const hashedPassword = await bcrypt.hash(newPassword, salt);
     currentUser.set({ userPassword: hashedPassword });
@@ -103,7 +104,10 @@ export const deleteUser = async (req, res) => {
       return res.status(404).send("User not found");
     }
 
-    res.send("User deleted successfully");
+    await deleteCachedData(`user:${req.params.id}`);
+    await deleteCachedData("users");
+
+    res.status(200).send("User deleted successfully");
   } catch (error) {
     res.status(500).send(error.message);
   }
@@ -187,10 +191,13 @@ export const refreshToken = async (req, res) => {
       return res.status(401).send("User not found.");
     }
 
-    if (!user.refreshToken.includes(token)) {
+    const tokenIndex = user.refreshToken.findIndex((t) => t.token === token);
+
+    if (tokenIndex === -1) {
       return res.status(401).send("Invalid refresh token.");
     }
-    user.refreshToken = user.refreshToken.filter(t => t !== token)
+    const { deviceInfo } = user.refreshToken[tokenIndex];
+    user.refreshToken.splice(tokenIndex, 1);
     await user.save();
 
     const newAccessToken = jwt.sign(
@@ -199,7 +206,7 @@ export const refreshToken = async (req, res) => {
       { expiresIn: "15m" }
     );
     const newRefreshToken = jwt.sign({ id: user._id, role: user.role}, config.get("REFRESH_SECRET"), {expiresIn: "7d"});
-    user.refreshToken.push(newRefreshToken);
+    user.refreshToken.push({ token: newRefreshToken, deviceInfo });
     await user.save();
 
     res.cookie("refreshToken", newRefreshToken, {
@@ -222,10 +229,10 @@ export const logout = async (req, res) => {
       return res.status(400).send("No refresh token provided.");
     }
 
-    const decoded = jwt.verify(token, config.get("JWT_SECRET"));
+    const decoded = jwt.verify(token, config.get("REFRESH_SECRET"));
     const user = await User.findById(decoded.id);
     if (user) {
-      user.refreshToken = user.refreshToken.filter(t => t !== token)
+      user.refreshToken = user.refreshToken.filter((t) => t.token !== token);
       await user.save();
     } 
     res.clearCookie("refreshToken", {
@@ -238,5 +245,3 @@ export const logout = async (req, res) => {
     res.status(500).send(error.message);
   }
 };
-
-
