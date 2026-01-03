@@ -31,6 +31,7 @@ export const verifyTimeStamp = (timeStamp) => {
 export const eventEmitter = async (event, data) => {
   const body = {
     event,
+    eventId: crypto.randomUUID(),
     data,
     timeStamp: new Date().toISOString(),
   };
