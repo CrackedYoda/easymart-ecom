@@ -174,6 +174,7 @@ export const login = async (req, res) => {
 
     res.json({ accessToken });
     eventEmitter(events.USER_LOGGED_IN, user)
+    console.log (config.get("ACCESS_SECRET" ))
     
   } catch (error) {
     res.status(500).send(error.message);
